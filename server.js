@@ -72,10 +72,10 @@ let shipments = [
   {
     id: "LZ2025001",
     trackingNumber: "LZ2025001",
-    origin: "New York, NY",
-    destination: "Los Angeles, CA",
+    origin: "Cape Town, South Africa",
+    destination: "Dubai, UAE",
     status: "In Transit",
-    currentLocation: "Chicago, IL",
+    currentLocation: "Johannesburg, South Africa",
     estimatedDelivery: "2025-07-25",
     weight: "45.2 kg",
     service: "Express Delivery",
@@ -83,31 +83,31 @@ let shipments = [
     history: [
       {
         timestamp: "2025-07-18 09:00",
-        location: "New York, NY",
+        location: "Cape Town, South Africa",
         status: "Package picked up",
         description: "Package collected from origin"
       },
       {
         timestamp: "2025-07-19 14:30",
-        location: "Philadelphia, PA",
+        location: "Johannesburg, South Africa",
         status: "In transit",
         description: "Package in transit to sorting facility"
       },
       {
         timestamp: "2025-07-20 08:15",
-        location: "Chicago, IL",
+        location: "Johannesburg, South Africa",
         status: "At sorting facility",
-        description: "Package arrived at Chicago sorting facility"
+        description: "Package arrived at Johannesburg sorting facility"
       }
     ]
   },
   {
     id: "LZ2025002",
     trackingNumber: "LZ2025002",
-    origin: "Miami, FL",
-    destination: "Seattle, WA",
+    origin: "Singapore",
+    destination: "London, United Kingdom",
     status: "Delivered",
-    currentLocation: "Seattle, WA",
+    currentLocation: "London, United Kingdom",
     estimatedDelivery: "2025-07-19",
     actualDelivery: "2025-07-19",
     weight: "12.8 kg",
@@ -116,25 +116,25 @@ let shipments = [
     history: [
       {
         timestamp: "2025-07-16 10:00",
-        location: "Miami, FL",
+        location: "Singapore",
         status: "Package picked up",
         description: "Package collected from origin"
       },
       {
         timestamp: "2025-07-17 16:45",
-        location: "Atlanta, GA",
+        location: "Dubai, UAE",
         status: "In transit",
         description: "Package in transit"
       },
       {
         timestamp: "2025-07-18 12:20",
-        location: "Denver, CO",
+        location: "Frankfurt, Germany",
         status: "In transit",
         description: "Package in transit"
       },
       {
         timestamp: "2025-07-19 09:30",
-        location: "Seattle, WA",
+        location: "London, United Kingdom",
         status: "Delivered",
         description: "Package delivered to recipient"
       }
@@ -143,10 +143,10 @@ let shipments = [
   {
     id: "LZ2025003", 
     trackingNumber: "LZ2025003",
-    origin: "Houston, TX",
-    destination: "Boston, MA",
+    origin: "Dubai, UAE",
+    destination: "Cape Town, South Africa",
     status: "Processing",
-    currentLocation: "Houston, TX",
+    currentLocation: "Dubai, UAE",
     estimatedDelivery: "2025-07-28",
     weight: "78.5 kg",
     service: "Freight Service",
@@ -154,7 +154,7 @@ let shipments = [
     history: [
       {
         timestamp: "2025-07-20 07:30",
-        location: "Houston, TX",
+        location: "Dubai, UAE",
         status: "Order received",
         description: "Shipment order created and processing"
       }
