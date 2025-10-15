@@ -37,16 +37,19 @@ app.options('*', (req, res) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static files from the website directory (for local development)
+app.use(express.static(path.join(__dirname, '../mannatstudio.com/html/logzee/v3')));
+
 // In-memory databases (replace with real database in production)
 const users = [
     {
         id: 1,
-        email: 'demo@firstfortunesecurities.com',
-        password: '$2a$10$IDUjoGHbIz0yReUtfLUfJuVFw883xU9l0h5u0Df8pzT78/.z0DuKO', // demo123
-        firstName: 'Demo',
-        lastName: 'User',
+        email: 'vanessa@firstfortunesecurities.com',
+        password: '$2a$10$LfRJ5vw3Aa6z1q.tTKJeIurfQ/mKcfx2MB5h0tSbPNJ15Ox3JZ1Oa', // bumblebee
+        firstName: 'Vanessa',
+        lastName: 'Johnson',
         company: 'FirstFortune Securities',
-        phone: '+1 (800) 555-DEMO',
+        phone: '+1 (800) 555-0198',
         role: 'customer',
         verified: true,
         createdAt: new Date('2025-01-01')
@@ -498,8 +501,25 @@ app.get('/api/admin/shipments', authenticateToken, (req, res) => {
     res.json({ success: true, data: shipments });
 });
 
-// API-only root route
+// Serve HTML pages for local development
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../mannatstudio.com/html/logzee/v3/index.html'));
+});
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../mannatstudio.com/html/logzee/v3/login.html'));
+});
+
+app.get('/track', (req, res) => {
+  res.sendFile(path.join(__dirname, '../mannatstudio.com/html/logzee/v3/track.html'));
+});
+
+app.get('/dashboard', (req, res) => {
+  res.sendFile(path.join(__dirname, '../mannatstudio.com/html/logzee/v3/dashboard.html'));
+});
+
+// API info route
+app.get('/api', (req, res) => {
   res.json({
     message: 'FirstFortune Securities API Server',
     version: '2.0.0',
@@ -551,7 +571,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`� Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log('');
   console.log('🔑 Demo Accounts:');
-  console.log('  Customer: demo@firstfortunesecurities.com / demo123');
+  console.log('  Customer: vanessa@firstfortunesecurities.com / bumblebee');
   console.log('  Admin: admin@firstfortunesecurities.com / admin123');
   console.log('');
   console.log('📦 Sample tracking numbers:');
