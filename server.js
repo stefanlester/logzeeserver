@@ -12,16 +12,28 @@ const JWT_SECRET = process.env.JWT_SECRET || 'firstfortune-super-secret-key-2025
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://logzeeserver.onrender.com',  
-    '*'  // Temporarily allow all origins for testing
+    'https://firstfortunesecurities.com',  // Your Hostinger domain
+    'https://www.firstfortunesecurities.com',  // With www
+    'https://logzeeserver.onrender.com'  // Render domain
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200 // For legacy browser support
 };
 
 // Middleware
 app.use(cors(corsOptions));
+
+// Handle preflight OPTIONS requests explicitly
+app.options('*', (req, res) => {
+  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.sendStatus(200);
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
