@@ -52,7 +52,7 @@ const users = [
         phone: '+1 (800) 555-0198',
         role: 'customer',
         verified: true,
-        createdAt: new Date('2025-01-01')
+  createdAt: new Date('2025-10-16')
     },
     {
         id: 2,
@@ -64,7 +64,7 @@ const users = [
         phone: '+1 (800) 555-ADMIN',
         role: 'admin',
         verified: true,
-        createdAt: new Date('2025-01-01')
+  createdAt: new Date('2025-10-16')
     }
 ];
 
@@ -76,25 +76,25 @@ let shipments = [
     destination: "Dubai, UAE",
     status: "In Transit",
     currentLocation: "Johannesburg, South Africa",
-    estimatedDelivery: "2025-07-25",
+  estimatedDelivery: "2025-10-16",
     weight: "45.2 kg",
     service: "Express Delivery",
     userId: 1, // Associated with demo user
     history: [
       {
-        timestamp: "2025-07-18 09:00",
+  timestamp: "2025-10-16 09:00",
         location: "Cape Town, South Africa",
         status: "Package picked up",
         description: "Package collected from origin"
       },
       {
-        timestamp: "2025-07-19 14:30",
+  timestamp: "2025-10-16 14:30",
         location: "Johannesburg, South Africa",
         status: "In transit",
         description: "Package in transit to sorting facility"
       },
       {
-        timestamp: "2025-07-20 08:15",
+  timestamp: "2025-10-16 08:15",
         location: "Johannesburg, South Africa",
         status: "At sorting facility",
         description: "Package arrived at Johannesburg sorting facility"
@@ -108,32 +108,32 @@ let shipments = [
     destination: "London, United Kingdom",
     status: "Delivered",
     currentLocation: "London, United Kingdom",
-    estimatedDelivery: "2025-07-19",
-    actualDelivery: "2025-07-19",
+  estimatedDelivery: "2025-10-16",
+  actualDelivery: "2025-10-16",
     weight: "12.8 kg",
     service: "Standard Shipping",
     userId: 1, // Associated with demo user
     history: [
       {
-        timestamp: "2025-07-16 10:00",
+  timestamp: "2025-10-16 10:00",
         location: "Singapore",
         status: "Package picked up",
         description: "Package collected from origin"
       },
       {
-        timestamp: "2025-07-17 16:45",
+  timestamp: "2025-10-16 16:45",
         location: "Dubai, UAE",
         status: "In transit",
         description: "Package in transit"
       },
       {
-        timestamp: "2025-07-18 12:20",
+  timestamp: "2025-10-16 12:20",
         location: "Frankfurt, Germany",
         status: "In transit",
         description: "Package in transit"
       },
       {
-        timestamp: "2025-07-19 09:30",
+  timestamp: "2025-10-16 09:30",
         location: "London, United Kingdom",
         status: "Delivered",
         description: "Package delivered to recipient"
@@ -147,13 +147,13 @@ let shipments = [
     destination: "Cape Town, South Africa",
     status: "Processing",
     currentLocation: "Dubai, UAE",
-    estimatedDelivery: "2025-07-28",
+  estimatedDelivery: "2025-10-16",
     weight: "78.5 kg",
     service: "Freight Service",
     userId: 2, // Associated with admin user
     history: [
       {
-        timestamp: "2025-07-20 07:30",
+  timestamp: "2025-10-16 07:30",
         location: "Dubai, UAE",
         status: "Order received",
         description: "Shipment order created and processing"
