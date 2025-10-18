@@ -87,12 +87,12 @@ let shipments = [
     id: "FS2001ASSETS",
     trackingNumber: "FS2001ASSETS",
     origin: "Geneva, Switzerland",
-    destination: "Secure Vault Storage",
-    status: "Secured in Vault",
+    destination: "6127 Oliver Drive, Alexandria, Virginia 22315, USA",
+    status: "Secured in Vault - Ready for Transfer",
     currentLocation: "Geneva Vault Facility",
-    estimatedDelivery: "Permanent Storage",
+    estimatedDelivery: "Pending Transfer Authorization",
     weight: "110kg Gold + 60ct Diamonds",
-    service: "Vault Security Storage",
+    service: "International Secure Asset Transfer",
     userId: 1, // Associated with Mary Miles & Craig Goodman
     assetType: "precious_metals_diamonds",
     depositDate: "2001-08-17",
@@ -116,8 +116,14 @@ let shipments = [
       {
         timestamp: "2025-10-18 09:00",
         location: "Geneva Vault Facility",
-        status: "Security verified",
-        description: "Regular security audit completed - all assets secure"
+        status: "Transfer preparation",
+        description: "Assets prepared for international transfer to Alexandria, Virginia"
+      },
+      {
+        timestamp: "2025-10-18 14:30",
+        location: "Geneva Vault Facility",
+        status: "Ready for transfer",
+        description: "All documentation prepared for secure transfer to 6127 Oliver Drive, Alexandria, VA"
       }
     ]
   },
