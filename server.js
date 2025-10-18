@@ -44,15 +44,29 @@ app.use(express.static(path.join(__dirname, '../mannatstudio.com/html/logzee/v3'
 const users = [
     {
         id: 1,
-        email: 'vanessa@firstfortunesecurities.com',
+        email: 'mary.craig@firstfortunesecurities.com',
         password: '$2a$10$LfRJ5vw3Aa6z1q.tTKJeIurfQ/mKcfx2MB5h0tSbPNJ15Ox3JZ1Oa', // bumblebee
-        firstName: 'Vanessa',
-        lastName: 'Johnson',
+        firstName: 'Mary Miles',
+        lastName: '& Craig Goodman',
         company: 'FirstFortune Securities',
-        phone: '+1 (800) 555-0198',
+        phone: '+41 22 918 8400',
         role: 'customer',
         verified: true,
-  createdAt: new Date('2025-10-16')
+        createdAt: new Date('2001-08-17'),
+        vaultAssets: {
+            gold: {
+                amount: '110 kilograms',
+                type: 'Certified 24K Gold',
+                purity: '99.99%'
+            },
+            diamonds: {
+                amount: '60 carats',
+                grade: 'D-Color, VVS',
+                quality: 'Excellent-quality cut'
+            },
+            depositDate: '2001-08-17',
+            location: 'Geneva, Switzerland'
+        }
     },
     {
         id: 2,
@@ -70,34 +84,40 @@ const users = [
 
 let shipments = [
   {
-    id: "LZ2025001",
-    trackingNumber: "LZ2025001",
-    origin: "Cape Town, South Africa",
-    destination: "Dubai, UAE",
-    status: "In Transit",
-    currentLocation: "Johannesburg, South Africa",
-  estimatedDelivery: "2025-10-16",
-    weight: "45.2 kg",
-    service: "Express Delivery",
-    userId: 1, // Associated with demo user
+    id: "FS2001ASSETS",
+    trackingNumber: "FS2001ASSETS",
+    origin: "Geneva, Switzerland",
+    destination: "Secure Vault Storage",
+    status: "Secured in Vault",
+    currentLocation: "Geneva Vault Facility",
+    estimatedDelivery: "Permanent Storage",
+    weight: "110kg Gold + 60ct Diamonds",
+    service: "Vault Security Storage",
+    userId: 1, // Associated with Mary Miles & Craig Goodman
+    assetType: "precious_metals_diamonds",
+    depositDate: "2001-08-17",
+    assets: {
+      gold: "110 kilograms certified 24K",
+      diamonds: "60 carats D-Color VVS"
+    },
     history: [
       {
-  timestamp: "2025-10-16 09:00",
-        location: "Cape Town, South Africa",
-        status: "Package picked up",
-        description: "Package collected from origin"
+        timestamp: "2001-08-17 10:00",
+        location: "Geneva, Switzerland",
+        status: "Assets deposited",
+        description: "Precious metals and diamonds secured in vault"
       },
       {
-  timestamp: "2025-10-16 14:30",
-        location: "Johannesburg, South Africa",
-        status: "In transit",
-        description: "Package in transit to sorting facility"
+        timestamp: "2001-08-17 15:30",
+        location: "Geneva Vault Facility",
+        status: "Vault secured",
+        description: "All assets verified and placed in maximum security vault"
       },
       {
-  timestamp: "2025-10-16 08:15",
-        location: "Johannesburg, South Africa",
-        status: "At sorting facility",
-        description: "Package arrived at Johannesburg sorting facility"
+        timestamp: "2025-10-18 09:00",
+        location: "Geneva Vault Facility",
+        status: "Security verified",
+        description: "Regular security audit completed - all assets secure"
       }
     ]
   },
@@ -322,6 +342,15 @@ app.get('/api/user/profile', authenticateToken, (req, res) => {
 app.get('/api/user/shipments', authenticateToken, (req, res) => {
     const userShipments = shipments.filter(s => s.userId === req.user.id);
     res.json({ success: true, data: userShipments, count: userShipments.length });
+});
+
+app.get('/api/user/vault', authenticateToken, (req, res) => {
+    const user = users.find(u => u.id === req.user.id);
+    if (!user || !user.vaultAssets) {
+        return res.status(404).json({ success: false, message: 'No vault assets found' });
+    }
+    
+    res.json({ success: true, data: user.vaultAssets });
 });
 
 // Public Tracking Routes
