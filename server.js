@@ -94,6 +94,7 @@ const users = [
       gold: {
         description: 'Refined Gold Bullion (Good Delivery Bars)',
         totalNetWeight: '350.000 kg (three hundred and fifty kilograms)',
+        vaulted: '350.000 kg (three hundred and fifty kilograms) currently held in vault at First Fortune Security Logistics',
         fineness: '999.9 (or as assayed)',
         inTransit: '50.000 kg (fifty kilograms) currently being moved to Albion Secure Metals Vault – London'
       },
