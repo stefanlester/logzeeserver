@@ -78,23 +78,32 @@ const users = [
     phone: '+44 131 555 1234',
     role: 'customer',
     verified: true,
-    createdAt: new Date('2025-10-29'),
+    createdAt: new Date('2012-07-01'),
     addresses: [
       '77 Stone Cellar Road, Kinloch, IV16 2TF, United Kingdom',
       'Rüderner Str. 83, 73733 Esslingen am Neckar, Germany',
       '39 Thistle Street, Edinburgh EH2 1DY, United Kingdom'
     ],
     vaultAssets: {
+      owner: 'Miss Kezia Osei Anderson- Mr. Gerhard Hennin',
+      addresses: [
+        '77 Stone Cellar Road, Kinloch, IV16 2TF, United Kingdom',
+        'Rüderner Str. 83, 73733 Esslingen am Neckar, Germany'
+      ],
+      bonafideOwner: true,
       gold: {
-        amount: '350 kilograms',
-        type: 'Refined Gold Bullion (Good Delivery Bars)',
-        purity: '999.9 (or as assayed)'
+        description: 'Refined Gold Bullion (Good Delivery Bars)',
+        totalNetWeight: '350.000 kg (three hundred and fifty kilograms)',
+        fineness: '999.9 (or as assayed)',
+        inTransit: '50.000 kg (fifty kilograms) currently being moved to Albion Secure Metals Vault – London'
       },
+      storage: 'First Fortune Security Logistics',
       serialNumber: 'DRFCL/PXW03',
       transactionCode: 'DRFCL/255CPP/01',
       securityCode: 'DFRCL80/49/03',
-      depositDate: '2025-10-29',
-      location: 'South Africa (in transit to Albion Secure Metals Vault – London)'
+      location: 'South Africa (50kg of gold is being moved to Albion Secure Metals Vault – London; remainder in storage)',
+      address: '39 Thistle Street, Edinburgh EH2 1DY, United Kingdom',
+      depositDate: 'July 2012'
     }
   },
     {
