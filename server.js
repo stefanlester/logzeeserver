@@ -55,14 +55,14 @@ const users = [
     createdAt: new Date('2001-08-17'),
     vaultAssets: {
       gold: {
-        amount: '110 kilograms',
-        type: 'Certified 24K Gold',
+        description: 'Certified 24K Gold',
+        vaulted: '110 kilograms',
+        inTransit: null,
         purity: '99.99%'
       },
       diamonds: {
-        amount: '60 carats',
-        grade: 'D-Color, VVS',
-        quality: 'Excellent-quality cut'
+        description: 'Premium Diamonds',
+        vaulted: '60 carats (D-Color, VVS, Excellent-quality cut)'
       },
       depositDate: '2001-08-17',
       location: 'Geneva, Switzerland'
@@ -93,10 +93,9 @@ const users = [
       bonafideOwner: true,
       gold: {
         description: 'Refined Gold Bullion (Good Delivery Bars)',
-        totalNetWeight: '350.000 kg (three hundred and fifty kilograms)',
-        vaulted: '350.000 kg (three hundred and fifty kilograms) currently held in vault at First Fortune Security Logistics',
-        fineness: '999.9 (or as assayed)',
-        inTransit: '50.000 kg (fifty kilograms) currently being moved to Albion Secure Metals Vault – London'
+        vaulted: '350.000 kg',
+        inTransit: '50.000 kg',
+        fineness: '999.9 (or as assayed)'
       },
       storage: 'First Fortune Security Logistics',
       serialNumber: 'DRFCL/PXW03',
