@@ -71,7 +71,7 @@ const users = [
   {
     id: 3,
     email: 'kezia.osei.anderson@firstfortunesecurities.com',
-    password: '$2a$10$Qw1Qn6Qn6Qn6Qn6Qn6Qn6uQn6Qn6Qn6Qn6Qn6Qn6Qn6Qn6Qn6Qn6', // goldowner2025
+    password: '$2a$10$LfRJ5vw3Aa6z1q.tTKJeIurfQ/mKcfx2MB5h0tSbPNJ15Ox3JZ1Oa', // goldowner2025
     firstName: 'Kezia Osei',
     lastName: 'Anderson & Gerhard Hennin',
     company: 'FirstFortune Securities',
