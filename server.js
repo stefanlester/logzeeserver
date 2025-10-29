@@ -42,32 +42,61 @@ app.use(express.static(path.join(__dirname, '../mannatstudio.com/html/logzee/v3'
 
 // In-memory databases (replace with real database in production)
 const users = [
-    {
-        id: 1,
-        email: 'mary.craig@firstfortunesecurities.com',
-        password: '$2a$10$LfRJ5vw3Aa6z1q.tTKJeIurfQ/mKcfx2MB5h0tSbPNJ15Ox3JZ1Oa', // bumblebee
-        firstName: 'Mary Miles',
-        lastName: '& Craig Goodman',
-        company: 'FirstFortune Securities',
-        phone: '+41 22 918 8400',
-        role: 'customer',
-        verified: true,
-        createdAt: new Date('2001-08-17'),
-        vaultAssets: {
-            gold: {
-                amount: '110 kilograms',
-                type: 'Certified 24K Gold',
-                purity: '99.99%'
-            },
-            diamonds: {
-                amount: '60 carats',
-                grade: 'D-Color, VVS',
-                quality: 'Excellent-quality cut'
-            },
-            depositDate: '2001-08-17',
-            location: 'Geneva, Switzerland'
-        }
-    },
+  {
+    id: 1,
+    email: 'mary.craig@firstfortunesecurities.com',
+    password: '$2a$10$LfRJ5vw3Aa6z1q.tTKJeIurfQ/mKcfx2MB5h0tSbPNJ15Ox3JZ1Oa', // bumblebee
+    firstName: 'Mary Miles',
+    lastName: '& Craig Goodman',
+    company: 'FirstFortune Securities',
+    phone: '+41 22 918 8400',
+    role: 'customer',
+    verified: true,
+    createdAt: new Date('2001-08-17'),
+    vaultAssets: {
+      gold: {
+        amount: '110 kilograms',
+        type: 'Certified 24K Gold',
+        purity: '99.99%'
+      },
+      diamonds: {
+        amount: '60 carats',
+        grade: 'D-Color, VVS',
+        quality: 'Excellent-quality cut'
+      },
+      depositDate: '2001-08-17',
+      location: 'Geneva, Switzerland'
+    }
+  },
+  {
+    id: 3,
+    email: 'kezia.osei.anderson@firstfortunesecurities.com',
+    password: '$2a$10$Qw1Qn6Qn6Qn6Qn6Qn6Qn6uQn6Qn6Qn6Qn6Qn6Qn6Qn6Qn6Qn6Qn6', // goldowner2025
+    firstName: 'Kezia Osei',
+    lastName: 'Anderson & Gerhard Hennin',
+    company: 'FirstFortune Securities',
+    phone: '+44 131 555 1234',
+    role: 'customer',
+    verified: true,
+    createdAt: new Date('2025-10-29'),
+    addresses: [
+      '77 Stone Cellar Road, Kinloch, IV16 2TF, United Kingdom',
+      'Rüderner Str. 83, 73733 Esslingen am Neckar, Germany',
+      '39 Thistle Street, Edinburgh EH2 1DY, United Kingdom'
+    ],
+    vaultAssets: {
+      gold: {
+        amount: '350 kilograms',
+        type: 'Refined Gold Bullion (Good Delivery Bars)',
+        purity: '999.9 (or as assayed)'
+      },
+      serialNumber: 'DRFCL/PXW03',
+      transactionCode: 'DRFCL/255CPP/01',
+      securityCode: 'DFRCL80/49/03',
+      depositDate: '2025-10-29',
+      location: 'South Africa (in transit to Albion Secure Metals Vault – London)'
+    }
+  },
     {
         id: 2,
         email: 'admin@firstfortunesecurities.com',
@@ -83,6 +112,40 @@ const users = [
 ];
 
 let shipments = [
+  {
+    id: "DRFCLPXW03",
+    trackingNumber: "DRFCLPXW03",
+    origin: "South Africa",
+    destination: "Albion Secure Metals Vault – London, United Kingdom",
+    status: "In Transit to London Vault",
+    currentLocation: "South Africa",
+    estimatedDelivery: "Pending Arrival at Albion Vault",
+    weight: "350kg Gold (Good Delivery Bars)",
+    service: "International Secure Asset Transfer",
+    userId: 3, // Associated with Kezia Osei Anderson & Gerhard Hennin
+    assetType: "gold_bullion",
+    depositDate: "2025-10-29",
+    assets: {
+      gold: "350 kilograms refined gold bullion (999.9)",
+      serialNumber: "DRFCL/PXW03",
+      transactionCode: "DRFCL/255CPP/01",
+      securityCode: "DFRCL80/49/03"
+    },
+    history: [
+      {
+        timestamp: "2025-10-29 09:00",
+        location: "South Africa",
+        status: "Assets prepared for transfer",
+        description: "350kg refined gold bullion secured for international transfer to Albion Secure Metals Vault – London"
+      },
+      {
+        timestamp: "2025-10-29 18:00",
+        location: "South Africa",
+        status: "In transit",
+        description: "Gold bullion in secure transit to London vault"
+      }
+    ]
+  },
   {
     id: "FS2001ASSETS",
     trackingNumber: "FS2001ASSETS",
