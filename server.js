@@ -161,10 +161,9 @@ let shipments = [
     trackingNumber: "FS20251031DELIVERY",
     origin: "Geneva, Switzerland",
     destination: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
-    status: "Delivered",
-    currentLocation: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
+    status: "In Transit",
+    currentLocation: "Express New York, New York, USA",
     estimatedDelivery: "2025-10-31",
-    actualDelivery: "2025-10-31",
     weight: "50kg Gold (50 x 1kg bars) + 40ct Diamonds (D-color, VVS1, GIA)",
     service: "International Secure Asset Delivery",
     userId: 1, // Mary Miles & Craig Goodman
@@ -176,10 +175,16 @@ let shipments = [
     },
     history: [
       {
-        timestamp: "2025-10-31 11:00",
-        location: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
-        status: "Delivered",
-        description: "Delivery of 50 one-kilogram bars of 24 carat gold and 40 D-colored, VVS1 diamonds with GIA certifications."
+        timestamp: "2025-10-31 08:00",
+        location: "Geneva, Switzerland",
+        status: "Dispatched",
+        description: "Shipment departed from Geneva, Switzerland."
+      },
+      {
+        timestamp: "2025-10-31 10:00",
+        location: "Express New York, New York, USA",
+        status: "In Transit",
+        description: "Arrived in New York (Express New York). Awaiting further transfer to Virginia."
       }
     ]
   },
