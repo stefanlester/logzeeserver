@@ -155,6 +155,34 @@ let shipments = [
       }
     ]
   },
+  // New shipment for Mary Miles & Craig Goodman, October 31, 2025
+  {
+    id: "FS20251031DELIVERY",
+    trackingNumber: "FS20251031DELIVERY",
+    origin: "Geneva, Switzerland",
+    destination: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
+    status: "Delivered",
+    currentLocation: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
+    estimatedDelivery: "2025-10-31",
+    actualDelivery: "2025-10-31",
+    weight: "50kg Gold (50 x 1kg bars) + 40ct Diamonds (D-color, VVS1, GIA)",
+    service: "International Secure Asset Delivery",
+    userId: 1, // Mary Miles & Craig Goodman
+    assetType: "gold_bars_diamonds",
+    depositDate: "2025-10-31",
+    assets: {
+      gold: "50 one-kilogram bars of 24 carat gold (99.99%)",
+      diamonds: "40 D-colored, VVS1 graded diamonds, each with GIA certification"
+    },
+    history: [
+      {
+        timestamp: "2025-10-31 11:00",
+        location: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
+        status: "Delivered",
+        description: "Delivery of 50 one-kilogram bars of 24 carat gold and 40 D-colored, VVS1 diamonds with GIA certifications."
+      }
+    ]
+  },
   {
     id: "FS2001ASSETS",
     trackingNumber: "FS2001ASSETS",
