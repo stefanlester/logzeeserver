@@ -181,7 +181,7 @@ let shipments = [
         description: "Shipment departed from Geneva, Switzerland."
       },
       {
-        timestamp: "2025-10-31 10:00",
+        timestamp: "2025-11-01 10:45",
         location: "Express New York, New York, USA",
         status: "In Transit",
         description: "Arrived in New York (Express New York). Awaiting further transfer to Virginia."
