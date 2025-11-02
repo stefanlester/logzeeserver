@@ -190,7 +190,7 @@ let shipments = [
         timestamp: "2025-11-02 09:30",
         location: "U.S. Customs and Border Protection – Peace Bridge Port of Entry",
         status: "On Hold",
-        description: "Held by CBP (Customs & Border Protection). Reason: Missing docs, undeclared value, improper import type, lack of GIA/assay, AML flags."
+        description: "HELD BY CBP (CUSTOMS & BORDER PROTECTION). REASON: MISSING DOCS AND ASSAY."
       }
     ]
   },
