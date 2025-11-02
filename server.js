@@ -161,8 +161,8 @@ let shipments = [
     trackingNumber: "FS20251031DELIVERY",
     origin: "Geneva, Switzerland",
     destination: "6127 Olivet Drive, Alexandria, Virginia 22315, USA",
-    status: "In Transit",
-    currentLocation: "Express New York, New York, USA",
+    status: "On Hold",
+    currentLocation: "U.S. Customs and Border Protection – Peace Bridge Port of Entry",
     estimatedDelivery: "2025-10-31",
     weight: "50kg Gold (50 x 1kg bars) + 40ct Diamonds (D-color, VVS1, GIA)",
     service: "International Secure Asset Delivery",
@@ -185,6 +185,12 @@ let shipments = [
         location: "Express New York, New York, USA",
         status: "In Transit",
         description: "Arrived in New York (Express New York). Awaiting further transfer to Virginia."
+      },
+      {
+        timestamp: "2025-11-02 09:30",
+        location: "U.S. Customs and Border Protection – Peace Bridge Port of Entry",
+        status: "On Hold",
+        description: "Held by CBP (Customs & Border Protection). Reason: Missing docs, undeclared value, improper import type, lack of GIA/assay, AML flags."
       }
     ]
   },
